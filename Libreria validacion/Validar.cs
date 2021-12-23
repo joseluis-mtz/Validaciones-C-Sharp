@@ -29,5 +29,26 @@ namespace Libreria_validacion
                 MessageBox.Show("Error, Imposible digitar letras.\n Este campo solo admite números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public static void SoloLetras(KeyPressEventArgs pE)
+        {
+            if (Char.IsLetter(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else if (Char.IsControl(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else if (Char.IsSeparator(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else
+            {
+                pE.Handled = true;
+                MessageBox.Show("Error, Imposible digitar letras.\n Este campo solo admite letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
