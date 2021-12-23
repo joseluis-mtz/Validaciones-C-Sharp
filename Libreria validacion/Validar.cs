@@ -26,7 +26,7 @@ namespace Libreria_validacion
             else
             {
                 pE.Handled = true;
-                MessageBox.Show("Error, Imposible digitar letras.\n Este campo solo admite números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error, Imposible digitar letras.\nEste campo solo admite números.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -47,7 +47,7 @@ namespace Libreria_validacion
             else
             {
                 pE.Handled = true;
-                MessageBox.Show("Error, Imposible digitar letras.\n Este campo solo admite letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Error, Imposible digitar letras.\nEste campo solo admite letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
