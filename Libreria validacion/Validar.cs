@@ -79,5 +79,14 @@ namespace Libreria_validacion
                 MessageBox.Show("Error, Imposible digitar letras.\nEste campo solo admite números y punto decimal.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public static void PresionarEnter(KeyPressEventArgs e)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                e.Handled = true;
+                SendKeys.Send(("{TAB}"));
+            }
+        }
     }
 }
