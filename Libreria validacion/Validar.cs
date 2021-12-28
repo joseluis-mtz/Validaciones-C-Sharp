@@ -88,5 +88,14 @@ namespace Libreria_validacion
                 SendKeys.Send(("{TAB}"));
             }
         }
+
+        public static void PresionarEnterBoton(KeyPressEventArgs e, Button btn)
+        {
+            if (e.KeyChar == (char)13)
+            {
+                e.Handled = true;
+                btn.PerformClick();
+            }
+        }
     }
 }
