@@ -50,5 +50,34 @@ namespace Libreria_validacion
                 MessageBox.Show("Error, Imposible digitar letras.\nEste campo solo admite letras.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        public static void SoloNumerosDecimales(KeyPressEventArgs pE)
+        {
+            if (Char.IsDigit(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else if (Char.IsSeparator(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else if (Char.IsControl(pE.KeyChar))
+            {
+                pE.Handled = false;
+            }
+            else if (pE.KeyChar.ToString().Equals("."))
+            {
+                pE.Handled = false;
+            }
+            else if (pE.KeyChar.ToString().Equals("-"))
+            {
+                pE.Handled = false;
+            }
+            else
+            {
+                pE.Handled = true;
+                MessageBox.Show("Error, Imposible digitar letras.\nEste campo solo admite números y punto decimal.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
